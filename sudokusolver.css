@@ -4,7 +4,7 @@
 }
 
 body.dark{
-    background-color:rgb(32, 28, 28); 
+    background-color: #333;
     color: white;
 } 
 
@@ -64,6 +64,11 @@ h3{
     color:  black;
     border-radius: 10px;
 }
+#choosed{
+   padding-left: 5px;
+   padding-right: 5px;
+}
+
 
 
 button{
@@ -79,13 +84,21 @@ button{
 a:hover{
     font-size: 20px;
 }
-p#lives, p#timer{
+p#timer{
     /* aise likha h paragraph m lines h */
     font-size: 25px ;
     border-radius: 3px;
     font-weight: bold;
     text-align: center;
-    
+    margin: 7px;
+}
+p#lives{
+    /* aise likha h paragraph m lines h */
+    font-size: 25px ;
+    border-radius: 3px;
+    font-weight: bold;
+    text-align: center;
+    margin: 7px;
 }
 #game{
     display: flex;
@@ -94,7 +107,6 @@ p#lives, p#timer{
 }
 #number_container{
     /* margin-top: 2px; */
-    display: none;
     justify-content: center;
     /* align-items: center; */
     flex-wrap: wrap;
@@ -124,18 +136,17 @@ p#lives, p#timer{
     width: 600px;
     height: 600px;
 }
-
 .tile {
-    border: 1px solid black ;
+    border: 2px solid rgb(145, 19, 19) ;
     width: 60px;
     height: 60px;
     text-align: center;
-    margin: 2px;
+    margin: 0px;
     vertical-align: middle;
     font-size: 40pt;   
 }
 p.selected{
-    background-color: rgb(49, 159, 209);
+    background-color: grey;
 }
 p.incorrect {
     color: red;
@@ -151,3 +162,14 @@ footer {
     text-align: center;
     margin: 10px;
 }
+.footercolor{
+    background-color: rgba(34, 6, 6, 0.281);
+    font-size: 20px;
+    color: white;
+    height: 40px;
+    padding-top: 10px;
+    text-align: center;
+}
+/* .github{
+    color: rgb(13, 245, 83);
+} */
