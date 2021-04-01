@@ -20,7 +20,6 @@ h1{
     font-size: 45pt;
     color: black;
     padding: 1px;
-    background-color: grey;
     border-radius: 15px;
     /* width: fit-content;  */
     margin-bottom: 4px;
@@ -29,9 +28,8 @@ h1{
     align-items: center;
     justify-content: center;
     display: flex; */
-
-
 }
+
 .div1{
     /* we will make a div and then trigger flex and make a center  */
     display: flex;
@@ -60,7 +58,6 @@ h3{
     display: flex;
     flex-wrap: center;
     justify-content: center;
-    background-color: teal;
     color:  black;
     border-radius: 10px;
 }
@@ -72,14 +69,9 @@ h3{
 
 
 button{
-    /* display: flex; */
     justify-items: center;
-    /* button stays in center irrespective of screen size */
-    /* border-radius: 10px;
-    border: solid black;
-    border-radius: 10px;
-    outline: 0px; */
-    /* position: fixed; */
+    border-radius: 7px;
+    background-color: grey;
 }
 a:hover{
     font-size: 20px;
@@ -131,18 +123,21 @@ p#lives{
     margin-top: 10px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: left;
-    align-content: flex-start;
+    /* content is kind of margin in self is padding and items is text align */
+    align-content: center;
     width: 600px;
     height: 600px;
 }
 .tile {
-    border: 2px solid rgb(145, 19, 19) ;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center         ;
+    border: 1px solid black ;
     width: 60px;
     height: 60px;
     text-align: center;
     margin: 0px;
-    vertical-align: middle;
+    /* vertical-align: middle; */
     font-size: 40pt;   
 }
 p.selected{
@@ -152,24 +147,213 @@ p.incorrect {
     color: red;
 }
 .rightborder{
-    border-right: 4px solid black;
+    border-right: 5px solid black;
 }
 .bottomborder{
-    border-bottom: 4px solid black;
+    border-bottom: 5px solid black;
 }
 footer {
     background-color: lightgray;
     text-align: center;
     margin: 10px;
 }
-.footercolor{
-    background-color: rgba(34, 6, 6, 0.281);
-    font-size: 20px;
-    color: white;
-    height: 40px;
-    padding-top: 10px;
-    text-align: center;
-}
+
 /* .github{
     color: rgb(13, 245, 83);
 } */
+@media (min-height: 340px) and (max-width: 640px){
+    header {
+        /* in this we align elements to the center */
+        text-align: center;
+        /* centres the text */
+        padding-bottom: 2px;
+        border-bottom: 1px solid red;
+        margin-bottom: 10px;
+    }h1{
+        font-size: 25px;
+        color: black;
+        padding: 0px;
+        background-color: grey;
+        border-radius: 5px;
+        /* width: fit-content;  */
+        margin-bottom: 2px;
+        margin-top: 0px;
+        /* text-align: center;
+        align-items: center;
+        justify-content: center;
+        display: flex; */
+    }
+    .div1{
+        /* we will make a div and then trigger flex and make a center  */
+        display: flex;
+        justify-content: center;
+        /* align-items: center; */
+    }
+    #setupgame{
+        /* id of the theme and difficulty and time */
+        display:flex ;
+        justify-content: center;
+        /* centres all the elements that is inside the setup game */
+    }
+    #setupgame > *{
+        /* this gives this properties to every element i.e the child of this id */
+        /* >* +* <* */
+        /* it shows that it is a direct children of setup game and it woudnlt allow to make it up  */
+        font-size: 10px;
+        margin-top: 1px;
+        padding-left: 10px;
+        padding-right: 10px;
+        align-items: center;
+        /* align items inside the flexbox vertically and margin auto for aligning all over the page rather than flexbox */
+    }h3{
+        font-size: 10px;
+        display: flex;
+        flex-wrap: center;
+        justify-content: center;
+        background-color: teal;
+        color:  black;
+        border-radius: 5px;
+    }
+    #choosed > *{
+       display: flex;
+       flex-direction: column;
+       font-size: 3px;
+    }
+    #chooset > *{
+       display: flex;
+       flex-direction: column;
+       font-size: 3px;
+
+    }#chooseth > *{
+        display: flex;
+       flex-direction: column;
+       font-size: 3px;
+
+    }
+    button#start-button1{
+        font-size: 10px;
+        height: 20px;
+        width: auto;
+        justify-items: center;
+        /* border-radius: 3px; */
+        background-color: grey;
+    }
+    a:hover{
+        font-size: 5px;
+    }
+    p#timer{
+        /* aise likha h paragraph m lines h */
+        font-size: 9px ;
+        border-radius: 3px;
+        font-weight: bold;
+        text-align: center;
+        margin: 4px;
+    }
+    p#lives{
+        /* aise likha h paragraph m lines h */
+        font-size: 9px ;
+        border-radius: 3px;
+        font-weight: bold;
+        text-align: center;
+        margin: 4px;
+        margin-bottom: 4px;
+    }
+    #game{
+        display: flex;
+        /* helps deploy flexbox */
+        justify-content: center;
+    }
+    #number_container{
+        justify-content: center;
+        /* align-items: center; */
+        flex-wrap: wrap;
+        flex-direction: column;
+        /* we can arrange them in column */
+    }
+    #number_container > *{
+        /* applying for every child */
+        /* this holds every number singly */
+        border: 1px solid black;
+        border-radius: 4px;
+        width: 30px;
+        height: 30px;
+        font-size: 20pt;
+        margin-left: 5px;
+        margin-right: 1px;
+        margin-top: 1px;
+        margin-bottom: 1px;
+        text-align: center;
+        
+    }
+    #board{
+        padding-top: 2px;
+        margin-top: 5px;
+        display: flex;
+        flex-wrap: wrap;
+        /* content is kind of margin in self is padding and items is text align */
+        align-content: center;
+        width: 300px;
+        height: 300px;
+        margin-bottom: 4px;
+    }
+    .tile {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        border: 1px solid black ;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        margin: 0px;
+        padding-top: 2px ;
+        vertical-align: middle;
+        font-size: 21px;   
+    }
+    p.selected{
+        background-color: grey;
+    }
+    p.incorrect {
+        color: red;
+    }
+    .rightborder{
+        border-right: 2px solid black;
+    }
+    .bottomborder{
+        border-bottom: 2px solid black;
+    }
+    footer {
+        background-color: lightgray;
+        text-align: center;
+        margin-top: 30px;
+        height: 25px;
+        vertical-align: middle;
+        color: black;
+    }
+    #linkedinlog{
+        height: 50px;
+    }
+    #linkedin{
+        margin-bottom: 3px;
+        font-size: 5px;
+    }
+    #github{
+        margin-bottom: 3px;
+        font-size: 5px;
+    }
+    #choosed > *{
+        display: flex;
+        flex-direction: column;
+        font-size: 5px;
+     }
+     #chooset > *{
+         font-size: 5px;
+        display: flex;
+        flex-direction: column;
+ 
+     }#chooseth > *{
+         display: flex;
+        flex-direction: column;
+        font-size: 5px;
+ 
+     }
+}
