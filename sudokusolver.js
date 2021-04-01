@@ -295,3 +295,4 @@ function qsa(selector) {
   // we can input query selector here and input the class
   return document.querySelectorAll(selector);
 }
+
