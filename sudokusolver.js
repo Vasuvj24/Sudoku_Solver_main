@@ -87,11 +87,17 @@ function startgame() {
     console.log("inside the dark checked");
     document.body.classList.add("dark");
     id("footer1").classList.add("footercolor");
+    id("footer1").style.backgroundColor="#333";
+    document.getElementsByClassName("div1").style.color="white";
+    // document.getElementsByTagName(body).style.color = "white";
+    // id(body).classList.remove("Lightbackground");
   }
 
   else{
     console.log("inside the dark unchecked");
     document.body.classList.remove("dark");
+    id("footer1").style.backgroundColor="white";
+    // id(body).classList.add("Lightbackground");
     //isme agar puri body p apply krna h to document.body kro vo pura body classlist p apply krega or fir hoga 
   }
   
@@ -295,4 +301,3 @@ function qsa(selector) {
   // we can input query selector here and input the class
   return document.querySelectorAll(selector);
 }
-
