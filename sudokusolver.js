@@ -132,6 +132,7 @@ function checkdone(){
   for(let i=0;i<tiles.length;i++){
     if(tiles[i].textContent==""){return false;}
   }
+  return true;
 }
 function endgame(){
   //we will disable timer and moves
